@@ -26,19 +26,28 @@ a:hover {
 }
 
 /* Add specific styles for your primary button */
+/* Button styles for .btn-primary (used in both header and footer) */
 .btn-primary {
-  background-color: #007bff; /* Change this to your preferred color */
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
+  background-color: #FD6E0A; /* Customize the color */
+  font-weight: bold;
+  color: white;
+  padding: 18px 36px;
   border-radius: 5px;
+  font-size: 20px;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* Hover effect for .btn-primary */
 .btn-primary:hover {
-  background-color: #0056b3; /* Change this to your preferred hover color */
+  background-color: #e65a00; /* Customize the hover color */
   transform: translateY(-2px);
+  cursor: pointer;
 }
+
 
 /* Add specific styles for hover effects on download and contact buttons */
 button .fa-download:hover,
@@ -185,6 +194,8 @@ main{
 .text-center{
   text-align: center;
 }
+
+
 
 /*skills section styles*/
 .skills-container{

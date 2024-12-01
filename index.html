@@ -22,7 +22,7 @@
           <li><a class="nav-color" href="">Portfolio</a></li>
           <li><a class="nav-color" href="">Blog</a></li>
           <li>
-            <a href=""><button class="btn-primary">Hire Me</button></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mshfahim12@gmail.com&su=Job Opportunity&body=Hello Saimon, I am interested in hiring you." class="btn-primary" target="_blank">Hire Me</a>
           </li>
         </ul>
       </nav>
@@ -40,8 +40,9 @@
             dedicated to contributing to innovative
             projects that drive success.
           </p>
-          <button class="btn-primary"> <i class="fa-solid fa-download"></i> Download CV</button>
-          <button class="btn-primary"> <i class="fa-solid fa-address-book"></i> Contact</button>
+          <a href="files/Saimon_Resume.pdf" class="btn-primary" download="Saimon_Resume.pdf">Download CV</a>
+          <!-- Contact Button -->
+          <button id="contactButton" class="btn-primary">Contact</button>
         </div>
         <img class="profile-picture" src="images/fahim.png" alt="fahim" />
       </div>
@@ -69,7 +70,7 @@
 
           <div class="about-item">
             <p class="item-title">Date of Birth</p>
-            <p class="item-description">04-Nov-1997</p>
+            <p class="item-description">04-Nov-1999</p>
           </div>
 
           <div class="about-item">
@@ -82,7 +83,7 @@
       <section class="skills">
         <h3 class="section-title text-center">What I Do</h3>
         <p class="section-description text-center">
-          I have more than 3 years experience building websites for clients.
+          I have more than 2 years experience building websites.
           Below is a quick overview of my main technical skill
           sets and technologies i use. Want to find out more about my
           experience? Check out my online resume and project portfolio.
@@ -163,40 +164,39 @@
           <div class="resume-column">
             <h3 class="resume-column-title">My Experience</h3>
             <div class="experience">
-              <h4 class="experience-title">Executive</h4>
-              <h5 class="experience-sub-title">Westford Immigrations <br> January, 2024 to Continuing</h5>
+              <h4 class="experience-title">Front-end Developer</h4>
+              <h5 class="experience-sub-title">Citycom International Travels <br> January, 2023 to March, 2024</h5>
               <div class="experience-description">
-                Currently I am working here as a service holder. My designation is Executive-Case Manager.
-                <br> Visa processing and maintaining a proper communication with clients according to their cases are my main roles.
+                Worked as a Front-end Developer in the IT Department at Citycom International Travels, focusing on creating and optimizing user interfaces for web applications and ensuring seamless integration with back-end systems.
               </div>
               <hr />
             </div>
             <div class="experience">
-              <h4 class="experience-title">Jr. Font End Developer</h4>
-              <h5 class="experience-sub-title">Citycom International Travels <br> March, 2023 to December, 2023</h5>
+              <h4 class="experience-title">Creative Designer</h4>
+              <h5 class="experience-sub-title"> Definition <br> July, 2022 to December, 2022</h5>
               <div class="experience-description">
-                I worked with a team of complete IT support and web developers to develop and maintain the company's website. My role was to build the API integration with the senior web developers.
+                Worked at Definition as a Creative Designer in the Department of Content Creation, specializing in designing graphics and multimedia content while ensuring brand with consistency.
               </div>
               <hr />
             </div>
             <div class="experience">
               <h4 class="experience-title">Application & Database System</h4>
-              <h5 class="experience-sub-title">LankaBangla Finance Limited <br> January, 2022 to April, 2022</h5>
+              <h5 class="experience-sub-title">LankaBangla Finance Limited <br> January, 2022 to June, 2022</h5>
               <div class="experience-description">
-                It was my academic experience by working as an intern system engineer in the division of IT in Application & Database team. My main role was to deliver the service in the systematic support team and maintaining the Database service by teamwork. 
+                Worked as an Intern Officer in the Application & Database System department of the IT sector at LankaBangla Finance, assisting in troubleshooting IT issues, managing data security, and supporting software deployment. 
               </div>
             </div>
           </div>
         </div>
         <div class="text-center resume-download-btn">
-          <button class="btn-primary"> <i class="fa-solid fa-download"></i> Download CV</button>
+          <a href="files/Saimon_Resume.pdf" class="btn-primary" download="Saimon_Resume.pdf">Download CV</a>
         </div>
       </section>
     </main>
     <footer class="secondary-bg">
       <div class="footer-column">
         <h3 class="section-title">Lets Connect</h3>
-        <p>Please fill out the form on this section to contact with me or call between 9:00 A.M and 8.00 P.M ET, Monday through Friday.</p>
+        <p>Please fill out the form on this section to contact with me or call between 9:00 A.M and 8.00 P.M ET, Sunday through Thursday.</p>
         <div>
           <a href="https://www.facebook.com/saimon.fahim.7311/" target="_blank"><img src="images/icons/facebook.png" alt=""> </a>
           <a href="https://www.instagram.com/ultimate_saimoon_knight/" target="_blank"><img src="images/icons/insta.png" alt=""> </a> 
@@ -212,5 +212,16 @@
           <input class="btn-primary" type="Submit" value="Submit">
       </div>
     </footer>
+
+    <script>
+      // Track download button clicks
+      document.querySelectorAll('.btn-primary').forEach(button => {
+      button.addEventListener('click', () => {
+      console.log('Download CV clicked');
+     // Optionally, send an event to an analytics service
+  });
+});
+    </script>
+     
   </body>
 </html>
