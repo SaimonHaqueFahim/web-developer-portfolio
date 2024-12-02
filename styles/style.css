@@ -27,13 +27,14 @@ a:hover {
 
 /* Add specific styles for your primary button */
 /* Button styles for .btn-primary (used in both header and footer) */
+/* Button styles for .btn-primary */
 .btn-primary {
-  background-color: #FD6E0A; /* Customize the color */
+  background-color: #FD6E0A; /* Vibrant orange */
   font-weight: bold;
   color: white;
-  padding: 18px 36px;
+  padding: 12px 24px;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 16px;
   border: none;
   text-decoration: none;
   display: inline-block;
@@ -43,10 +44,16 @@ a:hover {
 
 /* Hover effect for .btn-primary */
 .btn-primary:hover {
-  background-color: #e65a00; /* Customize the hover color */
+  background-color: #e65a08; /* Slightly darker shade for hover */
   transform: translateY(-2px);
-  cursor: pointer;
 }
+
+/* Input and Button Hover Effect */
+input[type="submit"]:hover,
+button:hover {
+  transform: scale(1.02);
+}
+
 
 
 /* Add specific styles for hover effects on download and contact buttons */
@@ -255,6 +262,34 @@ footer input[type="text"], footer input[type="email"], footer textarea{
   border: none;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between fields */
+}
+
+form input, form textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form textarea {
+  resize: none; /* Prevent resizing */
+}
+
+.footer-column a img {
+  width: 24px; /* Adjust as needed */
+  margin: 0 10px; /* Space between icons */
+  transition: transform 0.3s ease;
+}
+
+.footer-column a:hover img {
+  transform: scale(1.1); /* Slight hover animation */
+}
+
+
 /*Responsive Media Query*/
 
 @media screen and (max-width: 576px) {
@@ -281,9 +316,18 @@ footer input[type="text"], footer input[type="email"], footer textarea{
     margin: 20px;
   }
 
-  .profile-picture{
-    width: 100%;
+  img {
+    max-width: 100%;
+    height: auto;
   }
+  
+  /* Ensure Profile Picture in Banner Scales */
+  .profile-picture {
+    border-radius: 50%;
+    max-width: 150px;
+    height: auto;
+  }
+  
 
   .header{
     background-image: none;
@@ -312,3 +356,47 @@ footer input[type="text"], footer input[type="email"], footer textarea{
     flex-direction: column;
   }
 }
+
+/* Small Devices (Mobile) */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Stack nav items */
+    text-align: center;
+  }
+
+  .banner-content {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .skills-container, .resume-container {
+    flex-direction: column;
+  }
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 1024px) {
+  .banner-content h1 {
+    font-size: 1.8rem; /* Adjust heading size */
+  }
+}
+
+/* Default styles for desktop and other devices */
+.image-container img {
+  display: block;
+  margin: 0; /* Keeps the desktop styles unchanged */
+}
+
+/* Responsive styles for mobile (screens up to 768px wide) */
+@media (max-width: 768px) {
+  .image-container {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+  }
+
+  .image-container img {
+    margin: 0 auto; /* Ensures centering in mobile view */
+  }
+}
+
+
