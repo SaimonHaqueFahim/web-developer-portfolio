@@ -12,6 +12,14 @@
     />
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://kit.fontawesome.com/718bb57604.js" crossorigin="anonymous"></script> 
+    <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- JustGage & Raphael JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/justgage/1.2.9/justgage.min.js"></script>
+
+
   </head>
 
   <body class="open-sans-normal">
@@ -44,11 +52,14 @@
           <!-- Contact Button -->
           <button id="contactButton" class="btn-primary">Contact</button>
         </div>
-        <div><img class="image-container" src="images/fahim.png" alt="fahim" /></div>
+        <div><img class="image-container" src="images/jw-saimoon.png" alt="fahim" /></div>
       </div>
       
-    </header>
-    <main>
+     </header>
+
+                                      <!-- About Me -->
+
+     <main>
       <section class="about secondary-bg">
         <h3 class="section-title">About Me</h3>
         <p class="section-description">
@@ -80,6 +91,8 @@
           </div>
         </div>
       </section>
+
+                                      <!-- What I Do -->
 
       <section class="skills">
         <h3 class="section-title text-center">What I Do</h3>
@@ -125,11 +138,76 @@
         </div>
       </section>
 
-      <section class="resume">
-  <h3 class="section-title text-center">My Journey</h3>
 
-  <!-- Academic Timeline -->
-  <div class="timeline-section">
+
+                                    <!-- Expertise Meters Section -->
+
+     <section id="expertise">
+  <h2 class="section-title">My Expertise</h2>
+  <div class="gauges-container">
+    <div class="gauge" data-value="70">
+      <svg viewBox="0 0 100 60">
+        <path d="M10 50 A40 40 0 0 1 90 50" stroke="#ddd" stroke-width="10" fill="none"/>
+        <path class="progress" d="M10 50 A40 40 0 0 1 90 50" stroke="#4cafef" stroke-width="10" fill="none" stroke-dasharray="126" stroke-dashoffset="126"/>
+        <line class="needle" x1="50" y1="50" x2="50" y2="15" stroke="red" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <p>Web Development <br> (70%)</p>
+    </div>
+
+    <div class="gauge" data-value="80">
+      <svg viewBox="0 0 100 60">
+        <path d="M10 50 A40 40 0 0 1 90 50" stroke="#ddd" stroke-width="10" fill="none"/>
+        <path class="progress" d="M10 50 A40 40 0 0 1 90 50" stroke="#4cafef" stroke-width="10" fill="none" stroke-dasharray="126" stroke-dashoffset="126"/>
+        <line class="needle" x1="50" y1="50" x2="50" y2="15" stroke="red" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <p>SQA <br> (80%)</p>
+    </div>
+
+    <div class="gauge" data-value="75">
+      <svg viewBox="0 0 100 60">
+        <path d="M10 50 A40 40 0 0 1 90 50" stroke="#ddd" stroke-width="10" fill="none"/>
+        <path class="progress" d="M10 50 A40 40 0 0 1 90 50" stroke="#4cafef" stroke-width="10" fill="none" stroke-dasharray="126" stroke-dashoffset="126"/>
+        <line class="needle" x1="50" y1="50" x2="50" y2="15" stroke="red" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <p>IT System & Support <br> (75%)</p>
+    </div>
+
+    <div class="gauge" data-value="65">
+      <svg viewBox="0 0 100 60">
+        <path d="M10 50 A40 40 0 0 1 90 50" stroke="#ddd" stroke-width="10" fill="none"/>
+        <path class="progress" d="M10 50 A40 40 0 0 1 90 50" stroke="#4cafef" stroke-width="10" fill="none" stroke-dasharray="126" stroke-dashoffset="126"/>
+        <line class="needle" x1="50" y1="50" x2="50" y2="15" stroke="red" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <p>Business Analysis <br> (65%)</p>
+    </div>
+
+    <div class="gauge" data-value="70">
+      <svg viewBox="0 0 100 60">
+        <path d="M10 50 A40 40 0 0 1 90 50" stroke="#ddd" stroke-width="10" fill="none"/>
+        <path class="progress" d="M10 50 A40 40 0 0 1 90 50" stroke="#4cafef" stroke-width="10" fill="none" stroke-dasharray="126" stroke-dashoffset="126"/>
+        <line class="needle" x1="50" y1="50" x2="50" y2="15" stroke="red" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <p>Project Management <br> (70%)</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+                                     <!-- My Journey -->
+
+      <section class="resume">
+   <h3 class="section-title text-center">My Journey</h3>
+
+                                  <!-- Education -->
+
+
+      <div class="education-image">
+        <img src="images/graduate_fahim.jpg" alt="Graduation Ceremony" />
+      </div>
+    
+   <div class="timeline-section">
     <h4 class="timeline-title">Education</h4>
     <div class="timeline">
       <div class="timeline-item">
@@ -165,11 +243,19 @@
         </div>
       </div>
     </div>
-  </div>
+    </div>
 
-  <!-- Professional Timeline -->
-  <div class="timeline-section">
+                                   <!-- Professional Experience -->
+
+   <div class="timeline-section">
     <h4 class="timeline-title">Professional Experience</h4>
+
+    <div class="experience-image">
+       <img src="images/it_fahim.jpg" alt="Professional Experience Photo" />
+    </div>
+
+
+
     <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-logo">
@@ -232,88 +318,105 @@
         </div>
       </div>
     </div>
-  </div>
+   </div>
 
-  <!-- ===== Achievements Section Start ===== -->
+                                    <!-- Achievements & Certifications -->
+
 <section id="achievements" class="section">
-  <div class="container">
-    <h2 class="section-title">My Achievements</h2>
-    <p class="section-subtitle">Here are some of my certifications & extra-curricular achievements</p>
+  <h2 class="section-title">Achievements & Certifications</h2>
+  <div class="achievements-grid">
 
-    <div class="achievements-grid">
-      <!-- Certificate 1 -->
-      <div class="achievement-card">
-        <img src="images/Achievements/cisco.jpg" alt="Cisco CCNA">
-        <h3>CISCO CCNA</h3>
-        <p>Achieved foundational knowledge in networking, routing, switching, and IT infrastructure management.</p>
-      </div>
-
-      <!-- Certificate 2 -->
-      <div class="achievement-card">
-        <img src="images/Achievements/ph.jpg" alt="Web Development">
-        <h3>Complete Web Development by Programming Hero</h3>
-        <p>Hands-on training in front-end and back-end development with real-world projects.</p>
-      </div>
-
-      <!-- Certificate 3 -->
-      <div class="achievement-card">
-        <img src="images/Achievements/abc.jpg" alt="ABC Case Storm">
-        <h3>ABC Case Storm by AIUB Business Club</h3>
-        <p>Participated in competitive case-solving, showcasing teamwork and analytical skills.</p>
-      </div>
-
-      <!-- Certificate 4 -->
-      <div class="achievement-card">
-        <img src="images/Achievements/wd.jpg" alt="Web Design">
-        <h3>Web Design by 10 Minute School</h3>
-        <p>Acquired practical skills in responsive web design and layout optimization.</p>
-      </div>
-
-      <!-- Certificate 5 -->
-      <div class="achievement-card">
-        <img src="images/Achievements/de.jpg" alt="Data Entry">
-        <h3>Data Entry for Freelancing by 10 Minute School</h3>
-        <p>Built efficiency in structured data entry, accuracy, and freelancing workflows.</p>
-      </div>
-
-      <!-- Certificate 6 -->
-      <div class="achievement-card">
-        <img src="images/Achievements/IELTS.jpg" alt="IELTS">
-        <h3>IELTS</h3>
-        <p>Scored overall band 6.5, demonstrating strong proficiency in English communication.</p>
-      </div>
-
-      <!-- Certificate 7 -->
-      <div class="achievement-card">
-        <img src="images/Achievements/uixi.PNG" alt="Certificate 3">
-        <h3>UI/UX Design Fundamental by Edx</h3>
-        <p>Learned principles of user-centered design, wireframing, and usability testing.</p>
-      </div>
-
-      <!-- Certificate 8 -->
-      <div class="achievement-card">
-        <img src="images/Achievements/Cybersecurity.PNG" alt="Certificate 3">
-        <h3>Introduction to Cybersecurity</h3>
-        <p>Learned security principles, threat analysis, and risk management basics.</p>
-      </div>
-
-      <!-- Certificate 9 -->
-      <div class="achievement-card">
-        <img src="images/Achievements/python.PNG" alt="Certificate 3">
-        <h3>Python Basics for Data Science</h3>
-        <p>Developed core Python programming skills for data analysis and problem-solving.</p>
-      </div>
+    <!-- 1 -->
+    <div class="achievement-card">
+      <a href="https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccna/index.html" target="_blank" data-lightbox="certificates" data-title="CISCO CCNA - Achieved foundational knowledge in networking, routing, switching, and IT infrastructure management.">
+        <img src="images/Achievements/cisco.jpg" alt="CISCO CCNA Certificate">
+      </a>
+      <h3>CISCO CCNA</h3>
+      <p>Achieved foundational knowledge in networking, routing, switching, and IT infrastructure management.</p>
     </div>
-  </div>
-</section>
-<!-- ===== Achievements Section End ===== -->
+
+    <!-- 2 -->
+    <div class="achievement-card">
+      <a href="https://home.edx.org/" target="_blank" data-lightbox="certificates" data-title="Introduction to Cybersecurity - Learned security principles, threat analysis, and risk management basics.">
+        <img src="images/Achievements/Cybersecurity.PNG" alt="Cybersecurity Certificate">
+      </a>
+      <h3>Introduction to Cybersecurity</h3>
+      <p>Learned security principles, threat analysis, and risk management basics.</p>
+    </div>
+
+    <!-- 3 -->
+    <div class="achievement-card">
+      <a href="https://home.edx.org/" target="_blank" data-lightbox="certificates" data-title="Python Basics for Data Science - Developed core Python programming skills for data analysis and problem-solving.">
+        <img src="images/Achievements/python.PNG" alt="Python Certificate">
+      </a>
+      <h3>Python Basics for Data Science</h3>
+      <p>Developed core Python programming skills for data analysis and problem-solving.</p>
+    </div>
+
+    <!-- 4 -->
+    <div class="achievement-card">
+      <a href="https://web.programming-hero.com/home" target="_blank" data-lightbox="certificates" data-title="Complete Web Development by Programming Hero - Hands-on training in front-end and back-end development with real-world projects.">
+        <img src="images/Achievements/ph.jpg" alt="Web Development Certificate">
+      </a>
+      <h3>Complete Web Development</h3>
+      <p>Hands-on training in front-end and back-end development with real-world projects.</p>
+    </div>
+
+    <!-- 5 -->
+    <div class="achievement-card">
+      <a href="https://home.edx.org/" target="_blank" data-lightbox="certificates" data-title="UI/UX Design Fundamental by Edx - Explored design principles, user flows, and usability-focused wireframing.">
+        <img src="images/Achievements/uixi.PNG" alt="UI/UX Certificate">
+      </a>
+      <h3>UI/UX Design Fundamental</h3>
+      <p>Explored design principles, user flows, and usability-focused wireframing.</p>
+    </div>
+
+    <!-- 6 -->
+    <div class="achievement-card">
+      <a href="https://10minuteschool.com/" target="_blank" data-lightbox="certificates" data-title="Web Design by 10 Minute School - Acquired practical skills in responsive web design and layout optimization.">
+        <img src="images/Achievements/wd.jpg" alt="Web Design Certificate">
+      </a>
+      <h3>Web Design</h3>
+      <p>Acquired practical skills in responsive web design and layout optimization.</p>
+    </div>
+
+    <!-- 7 -->
+    <div class="achievement-card">
+      <a href="https://10minuteschool.com/" target="_blank" data-lightbox="certificates" data-title="Data Entry for Freelancing by 10 Minute School - Built efficiency in structured data entry, accuracy, and freelancing workflows.">
+        <img src="images/Achievements/de.jpg" alt="Data Entry Certificate">
+      </a>
+      <h3>Data Entry for Freelancing</h3>
+      <p>Built efficiency in structured data entry, accuracy, and freelancing workflows.</p>
+    </div>
+
+    <!-- 8 -->
+    <div class="achievement-card">
+      <a href="https://www.idp.com/bangladesh/ielts/" target="_blank" data-lightbox="certificates" data-title="IELTS - Scored overall band 6.5, demonstrating strong proficiency in English communication.">
+        <img src="images/Achievements/IELTS.jpg" alt="IELTS Certificate">
+      </a>
+      <h3>IELTS</h3>
+      <p>Scored overall band 6.5, demonstrating strong proficiency in English communication.</p>
+    </div>
+
+    <!-- 9 -->
+    <div class="achievement-card">
+      <a href="https://www.aiub.edu/oncampus/clubs/aiub-business-club" target="_blank" data-lightbox="certificates" data-title="ABC Case Storm by AIUB Business Club - Participated in competitive case-solving, showcasing teamwork and analytical skills.">
+        <img src="images/Achievements/abc.jpg" alt="AIUB Case Storm Certificate">
+      </a>
+      <h3>ABC Case Storm</h3>
+      <p>Participated in competitive case-solving, showcasing teamwork and analytical skills.</p>
+    </div>
+
+   </div>
+   </section>
 
 
-  <!-- Resume Download Button -->
+
+                                        <!-- Resume Download Button -->
   <div class="text-center resume-download-btn">
     <a href="files/Saimon_Resume.pdf" class="btn-primary" download="Saimon_Resume.pdf">Download CV</a>
   </div>
-</section>
+ </section>
 
     </main>
     <footer class="secondary-bg">
@@ -342,9 +445,40 @@
       button.addEventListener('click', () => {
       console.log('Download CV clicked');
      // Optionally, send an event to an analytics service
-  });
-});
+    });
+   });
     </script>
      
+     <!-- Lightbox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+
+    <script>
+  function animateGauges() {
+    document.querySelectorAll(".gauge").forEach(gauge => {
+      const value = gauge.getAttribute("data-value");
+      const progress = gauge.querySelector(".progress");
+      const needle = gauge.querySelector(".needle");
+
+      const offset = 126 - (126 * value) / 100;
+      progress.style.strokeDashoffset = offset;
+
+      const angle = (180 * value) / 100; // convert % to degrees
+      needle.style.transform = `rotate(${angle}deg)`;
+    });
+  }
+
+  // Run animation when scrolled into view
+  window.addEventListener("scroll", () => {
+    const section = document.getElementById("expertise");
+    const position = section.getBoundingClientRect().top;
+    if (position < window.innerHeight - 100) {
+      animateGauges();
+    }
+  });
+</script>
+
+
+
   </body>
 </html>
