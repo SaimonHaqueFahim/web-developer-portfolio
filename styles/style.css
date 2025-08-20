@@ -1,4 +1,111 @@
 
+.section, .card, .content-box {
+  background: rgba(0, 0, 0, 0.6); /* transparent dark glass look */
+  padding: 20px;
+  border-radius: 12px;
+  color: #f5f5f5;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+
+/* Neon glow effect for section titles */
+.neon-title {
+  color: #fff;
+  text-shadow: 
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff,
+    0 0 80px #0ff;
+  font-weight: bold;
+  text-align: center;      /* Center position */
+  font-size: 2.5rem;       /* Bigger font size */
+  margin: 40px 0 20px 0;   /* Space above & below */
+}
+
+
+/* Global button style */
+button, 
+.btn, 
+input[type="submit"] {
+  background: linear-gradient(135deg, #7b2ff7, #f107a3); /* Purple + Neon Pink */
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(123, 47, 247, 0.8), 
+              0 0 20px rgba(241, 7, 163, 0.6);
+}
+
+/* Hover animation with neon pulse */
+button:hover, 
+.btn:hover, 
+input[type="submit"]:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #f107a3, #7b2ff7);
+  box-shadow: 0 0 15px rgba(241, 7, 163, 1), 
+              0 0 30px rgba(123, 47, 247, 0.9);
+}
+
+/* Neon glow animated border */
+button::before, 
+.btn::before, 
+input[type="submit"]::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #7b2ff7, #f107a3, #09fbd3, #f107a3, #7b2ff7);
+  border-radius: 50px;
+  z-index: -1;
+  background-size: 400%;
+  filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+button:hover::before, 
+.btn:hover::before, 
+input[type="submit"]:hover::before {
+  opacity: 1;
+  animation: neonMove 6s linear infinite;
+}
+
+/* Moving neon gradient animation */
+@keyframes neonMove {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+
+
+/* White text for descriptions */
+.white-text {
+  color: #ffffff;
+}
+
+/* White text with soft neon space shadow */
+.white-neon {
+  color: #ffffff;
+  text-shadow: 
+    0 0 4px #00f0ff,
+    0 0 8px #00f0ff,
+    0 0 15px #00f0ff;
+}
+
+
+
 
 .open-sans-normal {
   font-family: "Open Sans", sans-serif;
@@ -13,6 +120,20 @@ button, input[type="submit"] {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
+
+/* Canvas background setup */
+#stars-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* stays behind everything */
+  background: black; /* fallback */
+}
+
+
 
 /* Button hover effect */
 button:hover, input[type="submit"]:hover {
@@ -180,6 +301,126 @@ main{
   margin-top: 130px;
   margin-bottom: 130px;
 }
+
+
+/* Modal Background */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  animation: fadeIn 0.4s ease;
+}
+
+/* Modal Content Box */
+.modal-content {
+  background: #fff;
+  margin: 8% auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 400px;
+  max-width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.4s ease;
+}
+
+/* Contact Card */
+.contact-card h2 {
+  margin: 15px 0 5px;
+  font-size: 22px;
+  color: #333;
+}
+
+.contact-card p {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+/* Profile Image */
+.contact-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Social Links */
+.contact-links {
+  margin-top: 15px;
+}
+
+.contact-links a {
+  margin: 0 10px;
+  font-size: 24px;
+  color: #444;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-links a:hover {
+  color: #0077ff;
+  transform: scale(1.2);
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideUp {
+  from {transform: translateY(40px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+
+/* Contact Button Style */
+.contact-btn {
+  background: linear-gradient(135deg, #ff7f50, #ff4500);
+  color: white;
+  padding: 12px 22px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-btn:hover {
+  background: linear-gradient(135deg, #ff4500, #ff7f50);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
+}
+
+.contact-btn:active {
+  transform: scale(0.95);
+}
+
+
 
 /*about styles*/
 .about{

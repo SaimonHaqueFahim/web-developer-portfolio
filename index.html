@@ -23,6 +23,7 @@
   </head>
 
   <body class="open-sans-normal">
+    <canvas id="stars-bg"></canvas>
     <header class="header secondary-bg">
       <nav>
         <h3 class="nav-title">Fa<span class="text-primary">hi</span>m</h3>
@@ -30,12 +31,12 @@
           <li><a class="nav-color" href="">Portfolio</a></li>
           <li><a class="nav-color" href="">Blog</a></li>
           <li>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mshfahim12@gmail.com&su=Job Opportunity&body=Hello Saimon, I am interested in hiring you." class="btn-primary" target="_blank">Hire Me</a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mshfahim12@gmail.com&su=Job Opportunity&body=Hello Saimon, I am interested in hiring you." class="btn" target="_blank">Hire Me</a>
           </li>
         </ul>
       </nav>
 
-      <div class="banner">
+       <div class="banner">
         <div class="banner-content">
           <h4 class="banner-greetings dark-2">Hello, I am</h4>
           <h1 class="banner-title">Saimon Haque</h1>
@@ -48,14 +49,48 @@
             dedicated to contributing to innovative
             projects that drive success.
           </p>
-          <a href="files/Saimon_Resume.pdf" class="btn-primary" download="Saimon_Resume.pdf">Download CV</a>
+          <a href="files/Saimon_Resume.pdf" class="btn" download="Saimon_Resume.pdf">Download CV</a>
           <!-- Contact Button -->
-          <button id="contactButton" class="btn-primary">Contact</button>
+          <button class="contact-btn">Contact</button>
         </div>
         <div><img class="image-container" src="images/jw-saimoon.png" alt="fahim" /></div>
+       </div>
+
+
+                                          <!-- Contact Popup -->
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <div class="contact-card">
+      <img src="images/contact-fahim.webp" alt="Saimon Haque Fahim" class="contact-img" />
+      <h2>Saimon Haque Fahim</h2>
+      <p>Dhaka, Bangladesh</p>
+
+      <div class="contact-links">
+        <a href="https://www.facebook.com/profile.php?id=61577829180434" target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/ultimate_saimoon_knight/" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/8801924075318" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="mailto:mshfahim12@gmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://maps.google.com/?q=North+Shahjahanpur,+Dhaka" target="_blank">
+          <i class="fas fa-map-marker-alt"></i>
+        </a>
       </div>
+    </div>
+  </div>
+</div>
+
+
       
-     </header>
+       </header>
+
 
                                       <!-- About Me -->
 
@@ -95,8 +130,8 @@
                                       <!-- What I Do -->
 
       <section class="skills">
-        <h3 class="section-title text-center">What I Do</h3>
-        <p class="section-description text-center">
+        <h3 class="neon-title">What I Do</h3>
+        <p class="white-text">
           I have more than 2 years experience building websites.
           Below is a quick overview of my main technical skill
           sets and technologies i use. Want to find out more about my
@@ -106,32 +141,32 @@
         <div class="skills-container">
           <div class="skill">
             <img src="images/icons/js.png" alt="" />
-            <h4 class="skill-title">JavaScript</h4>
-            <p class="skill-description">
+            <h4 class="white-text">JavaScript</h4>
+            <p class="white-text">
               JavaScript, often abbreviated as JS, is a programming language and core technology of the Web, alongside HTML and CSS. 99% of websites use JavaScript on the client side for webpage behavior
             </p>
           </div>
 
           <div class="skill">
             <img src="images/icons/react.png" alt="" />
-            <h4 class="skill-title">React</h4>
-            <p class="skill-description">
+            <h4 class="white-text">React</h4>
+            <p class="white-text">
               React is a free and open-source front-end JavaScript library for building user interfaces based on components by Facebook Inc. It is maintained by Meta and a community of individual developers and companies.
             </p>
           </div>
 
           <div class="skill">
             <img src="images/icons/nodejs.png" alt="" />
-            <h4 class="skill-title">Node.js</h4>
-            <p class="skill-description">
+            <h4 class="white-text">Node.js</h4>
+            <p class="white-text">
               Node.js is a cross-platform, open-source JavaScript runtime environment that can run on Windows, Linux, Unix, macOS, and more. Node.js runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser.
             </p>
           </div>
 
           <div class="skill">
             <img src="images/icons/mongo.png" alt="" />
-            <h4 class="skill-title">MongoDB</h4>
-            <p class="skill-description">
+            <h4 class="white-text">MongoDB</h4>
+            <p class="white-text">
               MongoDB is a source-available, cross-platform, document-oriented database program. Classified as a NoSQL database product, MongoDB utilizes JSON-like documents with optional schemas.
             </p>
           </div>
@@ -143,7 +178,7 @@
                                     <!-- Expertise Meters Section -->
 
      <section id="expertise">
-  <h2 class="section-title">My Expertise</h2>
+  <h2 class="neon-title">My Expertise</h2>
   <div class="gauges-container">
     <div class="gauge" data-value="70">
       <svg viewBox="0 0 100 60">
@@ -151,7 +186,7 @@
         <path class="progress" d="M10 50 A40 40 0 0 1 90 50" stroke="#4cafef" stroke-width="10" fill="none" stroke-dasharray="126" stroke-dashoffset="126"/>
         <line class="needle" x1="50" y1="50" x2="50" y2="15" stroke="red" stroke-width="3" stroke-linecap="round"/>
       </svg>
-      <p>Web Development <br> (70%)</p>
+      <p class="white-text">Web Development <br> (70%)</p>
     </div>
 
     <div class="gauge" data-value="80">
@@ -160,7 +195,7 @@
         <path class="progress" d="M10 50 A40 40 0 0 1 90 50" stroke="#4cafef" stroke-width="10" fill="none" stroke-dasharray="126" stroke-dashoffset="126"/>
         <line class="needle" x1="50" y1="50" x2="50" y2="15" stroke="red" stroke-width="3" stroke-linecap="round"/>
       </svg>
-      <p>SQA <br> (80%)</p>
+      <p class="white-text">SQA <br> (80%)</p>
     </div>
 
     <div class="gauge" data-value="75">
@@ -169,7 +204,7 @@
         <path class="progress" d="M10 50 A40 40 0 0 1 90 50" stroke="#4cafef" stroke-width="10" fill="none" stroke-dasharray="126" stroke-dashoffset="126"/>
         <line class="needle" x1="50" y1="50" x2="50" y2="15" stroke="red" stroke-width="3" stroke-linecap="round"/>
       </svg>
-      <p>IT System & Support <br> (75%)</p>
+      <p class="white-text">IT System & Support <br> (75%)</p>
     </div>
 
     <div class="gauge" data-value="65">
@@ -178,7 +213,7 @@
         <path class="progress" d="M10 50 A40 40 0 0 1 90 50" stroke="#4cafef" stroke-width="10" fill="none" stroke-dasharray="126" stroke-dashoffset="126"/>
         <line class="needle" x1="50" y1="50" x2="50" y2="15" stroke="red" stroke-width="3" stroke-linecap="round"/>
       </svg>
-      <p>Business Analysis <br> (65%)</p>
+      <p class="white-text">Business Analysis <br> (65%)</p>
     </div>
 
     <div class="gauge" data-value="70">
@@ -187,7 +222,7 @@
         <path class="progress" d="M10 50 A40 40 0 0 1 90 50" stroke="#4cafef" stroke-width="10" fill="none" stroke-dasharray="126" stroke-dashoffset="126"/>
         <line class="needle" x1="50" y1="50" x2="50" y2="15" stroke="red" stroke-width="3" stroke-linecap="round"/>
       </svg>
-      <p>Project Management <br> (70%)</p>
+      <p class="white-text">Project Management <br> (70%)</p>
     </div>
 
   </div>
@@ -198,7 +233,7 @@
                                      <!-- My Journey -->
 
       <section class="resume">
-   <h3 class="section-title text-center">My Journey</h3>
+   <h3 class="neon-title">My Journey</h3>
 
                                   <!-- Education -->
 
@@ -208,7 +243,7 @@
       </div>
     
    <div class="timeline-section">
-    <h4 class="timeline-title">Education</h4>
+    <h4 class="neon-title">Education</h4>
     <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-logo">
@@ -248,7 +283,7 @@
                                    <!-- Professional Experience -->
 
    <div class="timeline-section">
-    <h4 class="timeline-title">Professional Experience</h4>
+    <h4 class="neon-title">Professional Experience</h4>
 
     <div class="experience-image">
        <img src="images/it_fahim.jpg" alt="Professional Experience Photo" />
@@ -323,7 +358,7 @@
                                     <!-- Achievements & Certifications -->
 
 <section id="achievements" class="section">
-  <h2 class="section-title">Achievements & Certifications</h2>
+  <h2 class="neon-title">Achievements & Certifications</h2>
   <div class="achievements-grid">
 
     <!-- 1 -->
@@ -414,7 +449,7 @@
 
                                         <!-- Resume Download Button -->
   <div class="text-center resume-download-btn">
-    <a href="files/Saimon_Resume.pdf" class="btn-primary" download="Saimon_Resume.pdf">Download CV</a>
+    <a href="files/Saimon_Resume.pdf" class="btn" download="Saimon_Resume.pdf">Download CV</a>
   </div>
  </section>
 
@@ -477,6 +512,131 @@
     }
   });
 </script>
+
+
+
+ <script>
+  // Get modal and button
+  const modal = document.getElementById("contactModal");
+  const btn = document.querySelector(".contact-btn"); // your Contact button must have class="contact-btn"
+  const closeBtn = document.querySelector(".close-btn");
+
+  // Open modal
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // Close modal on X
+  closeBtn.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // Close modal if clicked outside
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+
+
+<script>
+const canvas = document.getElementById("stars-bg");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let stars = [];
+let comets = [];
+
+function random(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+function createStars(count) {
+  for (let i = 0; i < count; i++) {
+    stars.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      radius: Math.random() * 1.5,
+      alpha: random(0.3, 1),
+      speed: random(0.01, 0.05)
+    });
+  }
+}
+
+function drawStars() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "white";
+  stars.forEach(star => {
+    ctx.globalAlpha = star.alpha;
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+    ctx.fill();
+  });
+}
+
+function updateStars() {
+  stars.forEach(star => {
+    star.alpha += star.speed;
+    if (star.alpha <= 0.3 || star.alpha >= 1) star.speed *= -1;
+  });
+}
+
+function createComet() {
+  if (Math.random() < 0.01) {
+    comets.push({
+      x: Math.random() * canvas.width,
+      y: 0,
+      length: random(80, 150),
+      speed: random(4, 7)
+    });
+  }
+}
+
+function drawComets() {
+  comets.forEach((comet, index) => {
+    ctx.strokeStyle = "rgba(255,255,255,0.8)";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(comet.x, comet.y);
+    ctx.lineTo(comet.x - comet.length, comet.y - comet.length / 2);
+    ctx.stroke();
+
+    comet.x += comet.speed;
+    comet.y += comet.speed / 2;
+
+    if (comet.y > canvas.height) comets.splice(index, 1);
+  });
+}
+
+function animate() {
+  ctx.fillStyle = "black";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  drawStars();
+  updateStars();
+
+  createComet();
+  drawComets();
+
+  requestAnimationFrame(animate);
+}
+
+createStars(200);
+animate();
+
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  stars = [];
+  createStars(200);
+});
+</script>
+
+
 
 
 
