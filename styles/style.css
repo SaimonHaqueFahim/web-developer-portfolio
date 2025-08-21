@@ -1,3 +1,35 @@
+/* Neon Typing Text */
+.neon-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: left;
+  text-shadow: 0 0 10px #9d4edd, 0 0 20px #c77dff, 0 0 40px #7b2cbf;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #fff;
+  display: inline-block;
+  animation: blinkCursor 0.7s infinite;
+}
+
+@keyframes blinkCursor {
+  50% { border-color: transparent; }
+}
+
+.fahim-logo{
+  height: 170px;
+  width: 170px;
+}
+
+/* Sub intro text */
+.neon-sub {
+  font-size: 1.2rem;
+  color: #d0b3ff;
+  text-shadow: 0 0 6px #a855f7, 0 0 12px #9333ea;
+  margin-top: 10px;
+}
+
+
 
 .section, .card, .content-box {
   background: rgba(0, 0, 0, 0.6); /* transparent dark glass look */
@@ -257,21 +289,34 @@ nav ul{
 
 /*banner styles*/
 
-.banner{
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* পুরো viewport এর height */
+  overflow: hidden;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin: 0 35px 0 200px;
+  padding: 0 5%;
 }
 
-.banner-greetings{
-font-size: 45px;
-font-weight: 600;
+.banner-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ভিডিও কভার করবে পুরোটা */
+  z-index: -1; /* content এর পেছনে যাবে */
 }
 
-.banner-title{
-  font-weight: bold;
-  font-size: 85px;
+.banner-content, 
+.banner .image-container {
+  position: relative;
+  z-index: 2; /* ভিডিওর উপরে থাকবে */
+  color: #fff;
 }
+
 
 .profile-picture{
   width: 580px;

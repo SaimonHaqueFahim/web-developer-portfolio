@@ -24,9 +24,9 @@
 
   <body class="open-sans-normal">
     <canvas id="stars-bg"></canvas>
-    <header class="header secondary-bg">
+    
       <nav>
-        <h3 class="nav-title">Fa<span class="text-primary">hi</span>m</h3>
+        <img src="images/fahim_logo.png" alt="fahim_logo" class="fahim-logo" />
         <ul>
           <li><a class="nav-color" href="">Portfolio</a></li>
           <li><a class="nav-color" href="">Blog</a></li>
@@ -36,25 +36,37 @@
         </ul>
       </nav>
 
+                                       <!-- Banner -->
+
        <div class="banner">
-        <div class="banner-content">
-          <h4 class="banner-greetings dark-2">Hello, I am</h4>
-          <h1 class="banner-title">Saimon Haque</h1>
-          <p class="banner-description">
-            I am a Computer Science graduate and skilled
-            web developer with expertise specially in
-            front-end technologies. Passionate about
-            creating efficient web applications, I thrive in
-            collaborative environments and am
-            dedicated to contributing to innovative
-            projects that drive success.
-          </p>
-          <a href="files/Saimon_Resume.pdf" class="btn" download="Saimon_Resume.pdf">Download CV</a>
-          <!-- Contact Button -->
-          <button class="contact-btn">Contact</button>
-        </div>
-        <div><img class="image-container" src="images/jw-saimoon.png" alt="jhw-fahim" /></div>
-       </div>
+                                      <!-- Background Video -->
+  <video autoplay muted loop playsinline class="banner-video">
+    <source src="video/bg-vid.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Content Section -->
+  <div class="banner-content">
+  <!-- Typing Effect Main Heading -->
+  <h1 class="banner-title neon-text">
+    <span id="typing">Hello, I am Saimon Haque Fahim</span>
+  </h1>
+
+  <!-- Short Animated Welcome Text -->
+  <p class="banner-subtitle neon-sub">
+    <span id="welcome-text"></span>
+  </p>
+  <br>
+  <br>
+    <a href="files/Saimon_Resume.pdf" class="btn" download="Saimon_Resume.pdf">Download CV</a>
+    <button class="contact-btn">Contact</button>
+  </div>
+
+  <div>
+    <img class="image-container" src="images/jw-saimoon.png" alt="jhw-fahim" />
+  </div>
+</div>
+
 
 
                                           <!-- Contact Popup -->
@@ -451,7 +463,7 @@
   <div class="text-center resume-download-btn">
     <a href="files/Saimon_Resume.pdf" class="btn" download="Saimon_Resume.pdf">Download CV</a>
   </div>
- </section>
+   </section>
 
     </main>
     <footer class="secondary-bg">
@@ -461,7 +473,8 @@
         <div>
           <a href="https://www.facebook.com/saimon.fahim.7311/" target="_blank"><img src="images/icons/facebook.png" alt=""> </a>
           <a href="https://www.instagram.com/ultimate_saimoon_knight/" target="_blank"><img src="images/icons/insta.png" alt=""> </a> 
-          <a href=""><img src="images/icons/twitter.png" alt=""></a>
+          <a href="" target="_blank" ><img src="images/icons/twitter.png" alt=""></a>
+          <a href="https://github.com/SaimonHaqueFahim" target="_blank" ><img src="images/icons/github.png" alt=""></a>
         </div>
       </div>
       <div class="footer-column">
@@ -634,11 +647,44 @@ window.addEventListener("resize", () => {
   stars = [];
   createStars(200);
 });
+
+
+
+// Typing Effect
+const typingElement = document.getElementById("typing");
+const text = "Hello, I am Saimon Haque Fahim";
+let index = 0;
+
+function typeEffect() {
+  typingElement.textContent = text.slice(0, index++);
+  if (index <= text.length) {
+    setTimeout(typeEffect, 120); // typing speed
+  } else {
+    setTimeout(() => {
+      index = 0;
+      typingElement.textContent = "";
+      typeEffect(); // restart typing
+    }, 1500); // pause before restart
+  }
+}
+typeEffect();
+
+// Welcome Sub-Text
+const welcomeElement = document.getElementById("welcome-text");
+const welcomeMessage = "🚀 Welcome to my Portfolio!";
+let subIndex = 0;
+
+function typeSub() {
+  if (subIndex < welcomeMessage.length) {
+    welcomeElement.textContent += welcomeMessage.charAt(subIndex);
+    subIndex++;
+    setTimeout(typeSub, 60);
+  }
+}
+setTimeout(typeSub, 3000); // show after main typing
+
+
 </script>
-
-
-
-
 
   </body>
 </html>
