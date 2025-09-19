@@ -652,18 +652,106 @@ main{
 
 
 
+/* --- Skills Section (Updated) --- */
+.skill {
+  padding: 80px 10%;
+  background: #0f0f17;
+  color: #fff;
+  text-align: center;
+}
 
-/*skills section styles*/
-.skills-container{
+.section-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #bbb;
+}
+
+/* Container fix */
+.skills-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 25px;
 }
 
-.skill{
-padding: 30px;
-border-radius: 5px;
-box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.06);
+/* Each category box */
+.skill-category {
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 0 15px rgba(157,78,221,0.2);
 }
+
+/* Category header */
+.skill-header {
+  width: 100%;
+  background: rgba(199,125,255,0.15);
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.skill-header:hover {
+  background: rgba(199,125,255,0.3);
+}
+
+/* Skill grid */
+.skill-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Individual skill card */
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.07);
+  padding: 20px 10px;
+  border-radius: 12px;
+  height: 140px; /* same height for all */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skill-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(199,125,255,0.4);
+}
+
+/* Logos */
+.skill-item img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Text */
+.skill-item span {
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
 
 /*resume section styles*/
 .resume-container{
@@ -1019,5 +1107,4 @@ form textarea {
     margin: 0 auto; /* Ensures centering in mobile view */
   }
 }
-
 
