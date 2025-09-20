@@ -866,45 +866,69 @@ main{
   color: #222;
 }
 
-.achievements-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  justify-content: center;
-  align-items: stretch;
+/* Section styling */
+.certifications {
+  padding: 60px 20px;
+  text-align: center;
 }
 
-.achievement-card {
-  background: #fff;
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00ffd5;
+  text-shadow: 0 0 10px #00ffd5;
+  margin-bottom: 40px;
+}
+
+/* Card styling */
+.cert-card {
+  position: relative;
+  overflow: hidden;
   border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
 }
 
-.achievement-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.achievement-card img {
+.cert-card img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  height: 220px;     /* Make all certificates the same height */
+  object-fit: cover; /* Crop proportionally without distortion */
+  border-radius: 12px;
 }
 
-.achievement-card h3 {
+.cert-card:hover {
+  transform: scale(1.05);
+}
+
+.cert-card .overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
   font-size: 1.2rem;
-  margin: 10px 0;
-  color: #333;
+  transition: opacity 0.3s ease;
 }
 
-.achievement-card p {
-  font-size: 0.95rem;
-  color: #666;
+.cert-card:hover .overlay {
+  opacity: 1;
 }
+
+/* Swiper sizing */
+.swiper {
+  width: 90%;
+  padding-bottom: 40px;
+}
+
+.swiper-slide {
+  width: 300px; /* Adjust card width */
+}
+
 
 
 .gauges-container {
