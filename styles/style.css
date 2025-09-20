@@ -966,18 +966,72 @@ main{
 
 
 
-
-
-
 .resume-download-btn{
   margin-top: 50px;
 }
 
+
 /*footer style*/
 footer{
-  padding: 130px 230px;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  color: #fff;
+  padding: 50px 20px 20px;
+  margin-top: 50px;
+  border-top: 2px solid #00ffd5; /* subtle neon line */
+}
+
+footer h2 {
+  color: #00ffd5;
+  margin-bottom: 15px;
+  text-shadow: 0 0 8px #00ffd5;
+}
+
+footer p {
+  color: #ccc;
+  font-size: 14px;
+}
+
+footer a {
+  color: #ccc;
+  margin: 0 10px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+footer a:hover {
+  color: #00ffd5;
+  text-shadow: 0 0 6px #00ffd5;
+}
+
+/* Social icons row */
+.footer-social {
+  margin: 20px 0;
+}
+
+.footer-social a {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+/* Footer bottom strip */
+.footer-bottom {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #333;
   display: flex;
-  gap: 100px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #888;
+}
+
+.footer-bottom a {
+  color: #888;
+  margin-left: 10px;
+}
+
+.footer-bottom a:hover {
+  color: #00ffd5;
 }
 
 .footer-column{
@@ -1020,6 +1074,37 @@ form textarea {
 
 .footer-column a:hover img {
   transform: scale(1.1); /* Slight hover animation */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap; /* Responsive for smaller screens */
+  margin-bottom: 30px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 300px; /* prevents squishing */
+}
+
+/* Footer form styling */
+.footer-column form {
+  max-width: 400px;   /* controls overall form width */
+  width: 100%;
+}
+
+.footer-column form input,
+.footer-column form textarea {
+  width: 100%;        /* make all fields equal */
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 15px;
 }
 
 
