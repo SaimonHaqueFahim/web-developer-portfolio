@@ -1080,7 +1080,7 @@ form textarea {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 40px;
+  gap: 200px;
   flex-wrap: wrap; /* Responsive for smaller screens */
   margin-bottom: 30px;
 }
