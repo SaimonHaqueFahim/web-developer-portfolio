@@ -347,6 +347,45 @@ nav ul{
 }
 
 
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #111;
+  border: 1px solid #00ffd5;
+  border-radius: 8px;
+  list-style: none;
+  padding: 10px 0;
+  min-width: 150px;
+  z-index: 10;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 10px 15px;
+}
+
+.dropdown-menu li a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background: #00ffd5;
+  color: #000;
+}
+
+
+
 
 .btn-primary{
   background-color: #FD6E0A;
