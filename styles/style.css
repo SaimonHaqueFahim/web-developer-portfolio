@@ -690,6 +690,10 @@ main{
   transform: scale(1.05); /* slight zoom on hover */
 }
 
+.edutitle{
+  color: black;
+  font: bold;
+}
 
 
 /* --- Skills Section (Updated) --- */
@@ -827,6 +831,11 @@ main{
 
 .experience-image img:hover {
   transform: scale(1.05);
+}
+
+.jobpost{
+  color: black;
+  font: bold;
 }
 
 
