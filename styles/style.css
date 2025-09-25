@@ -137,8 +137,6 @@ input[type="submit"]:hover::before {
 }
 
 
-
-
 .open-sans-normal {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
@@ -219,7 +217,10 @@ button .fa-address-book:hover {
   filter: brightness(1.2);
 }
 
-/*GPT Part ends*/
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 
 /*header*/
