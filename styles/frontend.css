@@ -47,6 +47,61 @@ body {
   box-shadow: 0 0 20px rgba(0,255,224,0.4);
 }
 
+/* 🔎 Search Bar Styling */
+.search-container {
+  position: relative;
+  margin: 25px auto 0;
+  max-width: 500px;
+  width: 100%;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 12px 18px;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: 2px solid #00ffe0;
+  background: #111;
+  color: #fff;
+  outline: none;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(0,255,224,0.3);
+}
+
+.search-container input:focus {
+  border-color: #00ffe0;
+  box-shadow: 0 0 20px rgba(0,255,224,0.6);
+}
+
+/* Suggestions dropdown */
+.suggestions {
+  position: absolute;
+  top: 105%;
+  left: 0;
+  right: 0;
+  background: #0d0d0d;
+  border: 1px solid rgba(0,255,224,0.2);
+  border-radius: 12px;
+  max-height: 250px;
+  overflow-y: auto;
+  display: none;
+  z-index: 10;
+}
+
+.suggestions div {
+  padding: 12px 16px;
+  cursor: pointer;
+  color: #ccc;
+  transition: 0.2s;
+}
+
+.suggestions div:hover {
+  background: rgba(0,255,224,0.1);
+  color: #00ffe0;
+}
+
+
+
 /* Grid layout - 4 cards per row */
 .projects-grid {
   display: grid;
