@@ -1,50 +1,346 @@
-<head>
-  <title>Graphics Designs</title>
-  <link rel="stylesheet" href="styles/style.css" />
-  <link rel="stylesheet" href="styles/frontend.css" />
-  <link rel="stylesheet" href="styles/graphics.css" />
-  <link rel="shortcut icon" href="images/tab_logo.png" type="image/x-icon" />
-</head>
-<section class="graphics">
-  <h1>Graphics Projects</h1>
-  <p>
-    Here are some of my creative works in logo designing, poster creation, and
-    UI/UX design.
-  </p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graphics Designs</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/frontend.css" />
+    <link rel="stylesheet" href="styles/graphics.css" />
+    <link rel="shortcut icon" href="images/tab_logo.png" type="image/x-icon" />
+  </head>
 
-  <div class="graphics-categories">
-    <button onclick="location.href='#logos'">Logo Designing</button>
-    <button onclick="location.href='#posters'">Poster Designing</button>
-    <button onclick="location.href='#uiux'">UI/UX</button>
-  </div>
+  <body>
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()"
+        >&times;</a
+      >
+      <a href="#" onclick="showCategory('logos')">Logo Designing</a>
+      <a href="#" onclick="showCategory('posters')">Poster Designing</a>
+      <a href="#" onclick="showCategory('uiux')">UI/UX</a>
+    </div>
 
-  <div id="logos" class="gallery-section">
-    <h2>Logo Designs</h2>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="images/logo1.png" alt="Logo Design 1" />
-        <p>Creative logo concept for a tech startup.</p>
+    <!-- Topbar with Hamburger, Logo, and Search -->
+    <header class="graphics">
+      <span class="hamburger" onclick="toggleSidebar()">&#9776;</span>
+      <img src="images/fahim_logo.png" alt="Logo" class="site-logo" />
+      <!-- 🔎 Search Bar -->
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search projects..."
+          autocomplete="off"
+        />
+        <div id="suggestions" class="suggestions"></div>
+      </div>
+    </header>
+
+    <!-- Main Content Wrapper for Galleries -->
+    <div id="main-content" class="main-content">
+      <h2 class="section-title">Graphics Projects</h2>
+      <p class="title-description">
+        Here are some of my creative works in logo designing, poster creation,
+        and UI/UX design.
+      </p>
+      <!-- GALLERY SECTIONS -->
+      <div id="logos" class="gallery-section category">
+        <h2>Logo Designs</h2>
+        <div class="gallery-grid">
+          <!-- Card 1 -->
+          <div
+            class="card"
+            onclick="openModal('images/graphics/logos/mrknight_logo.png')"
+          >
+            <img
+              src="images/graphics/logos/mrknight_logo.png"
+              alt="Logo Design 1"
+              class="thumbnail"
+            />
+            <div class="card-info">
+              <h3 class="card-title">SaiMoon Knight</h3>
+              <p class="card-desc">Saimon's personal logo 🌙</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="card"
+            onclick="openModal('images/graphics/logos/knight_logo.png')"
+          >
+            <img
+              src="images/graphics/logos/knight_logo.png"
+              alt="Logo Design 1"
+              class="thumbnail"
+            />
+            <div class="card-info">
+              <h3 class="card-title">Knight Logo</h3>
+              <p class="card-desc">
+                Personal logo designed for motivational quotes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="card"
+            onclick="openModal('images/graphics/logos/fahim_arabic_logo.png')"
+          >
+            <img
+              src="images/graphics/logos/fahim_arabic_logo.png"
+              alt="Logo Design 1"
+              class="thumbnail"
+            />
+            <div class="card-info">
+              <h3 class="card-title">Fahim Logo (Arabic)</h3>
+              <p class="card-desc">
+                Fahim's Arabic logo used for Islamic content purpose.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="card"
+            onclick="openModal('images/graphics/logos/Ad-Duha_logo.png')"
+          >
+            <img
+              src="images/graphics/logos/Ad-Duha_logo.png"
+              alt="Logo Design 1"
+              class="thumbnail"
+            />
+            <div class="card-info">
+              <h3 class="card-title">Ad-Duha</h3>
+              <p class="card-desc">A logo for preaching Islam.</p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div
+            class="card"
+            onclick="openModal('images/graphics/logos/A_letter_tech_logo.png')"
+          >
+            <img
+              src="images/graphics/logos/A_letter_tech_logo.png"
+              alt="Logo Design 1"
+              class="thumbnail"
+            />
+            <div class="card-info">
+              <h3 class="card-title">AQUOS</h3>
+              <p class="card-desc">A letter tech logo.</p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div
+            class="card"
+            onclick="openModal('images/graphics/logos/purple_modern_Gaming_logo.png')"
+          >
+            <img
+              src="images/graphics/logos/purple_modern_Gaming_logo.png"
+              alt="Logo Design 1"
+              class="thumbnail"
+            />
+            <div class="card-info">
+              <h3 class="card-title">Flying Sheild</h3>
+              <p class="card-desc">Purple modern Gaming Logo.</p>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div
+            class="card"
+            onclick="openModal('images/graphics/logos/gaming_logo.png')"
+          >
+            <img
+              src="images/graphics/logos/gaming_logo.png"
+              alt="Logo Design 1"
+              class="thumbnail"
+            />
+            <div class="card-info">
+              <h3 class="card-title">Draconian Champion</h3>
+              <p class="card-desc">A Gaming Logo of Draconian Champion.</p>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div
+            class="card"
+            onclick="openModal('images/graphics/logos/soldier_logo.png')"
+          >
+            <img
+              src="images/graphics/logos/soldier_logo.png"
+              alt="Logo Design 1"
+              class="thumbnail"
+            />
+            <div class="card-info">
+              <h3 class="card-title">Soldier</h3>
+              <p class="card-desc">
+                Green and Black E-Sports Illustrative Military Gaming Logo
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 9 -->
+          <div
+            class="card"
+            onclick="openModal('images/graphics/logos/mafia_logo.png')"
+          >
+            <img
+              src="images/graphics/logos/mafia_logo.png"
+              alt="Logo Design 1"
+              class="thumbnail"
+            />
+            <div class="card-info">
+              <h3 class="card-title">Soldier</h3>
+              <p class="card-desc">Dark Illustrative The Mafia Gaming Logo.</p>
+            </div>
+          </div>
+
+          <!-- Card 10 -->
+          <div
+            class="card"
+            onclick="openModal('images/graphics/logos/football_logo.png')"
+          >
+            <img
+              src="images/graphics/logos/football_logo.png"
+              alt="Logo Design 1"
+              class="thumbnail"
+            />
+            <div class="card-info">
+              <h3 class="card-title">FootbalL Showdown</h3>
+              <p class="card-desc">A Football team's logo.</p>
+            </div>
+          </div>
+
+          <!-- Card 11 -->
+          <div
+            class="card"
+            onclick="openModal('images/graphics/logos/eagle_logo.png')"
+          >
+            <img
+              src="images/graphics/logos/eagle_logo.png"
+              alt="Logo Design 1"
+              class="thumbnail"
+            />
+            <div class="card-info">
+              <h3 class="card-title">Royal Eagle</h3>
+              <p class="card-desc">
+                Brown and Yellow Flat Esports Illustrative Royal Eagle Logo.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 12 -->
+          <div
+            class="card"
+            onclick="openModal('images/graphics/logos/light_studio_logo.png')"
+          >
+            <img
+              src="images/graphics/logos/light_studio_logo.png"
+              alt="Logo Design 1"
+              class="thumbnail"
+            />
+            <div class="card-info">
+              <h3 class="card-title">Light Studio</h3>
+              <p class="card-desc">Black & White Minimalist Business Logo.</p>
+            </div>
+          </div>
+
+          <!-- Add more cards here -->
+        </div>
+      </div>
+
+      <div id="posters" class="gallery-section category">
+        <h2>Poster Designs</h2>
+        <div class="gallery-grid">
+          <div class="card" onclick="openModal('images/poster1.png')">
+            <img
+              src="images/graphics/posters/"
+              alt="Poster Design 1"
+              class="thumbnail"
+            />
+            <div class="card-info">
+              <h3 class="card-title">Product Campaign Poster</h3>
+              <p class="card-desc">
+                Modern promotional poster for a new product launch.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="uiux" class="gallery-section category">
+        <h2>UI/UX Designs</h2>
+        <div class="gallery-grid">
+          <div class="card" onclick="openModal('images/uiux1.png')">
+            <img
+              src="images/uiux1.png"
+              alt="UI/UX Design 1"
+              class="thumbnail"
+            />
+            <div class="card-info">
+              <h3 class="card-title">Mobile App UI</h3>
+              <p class="card-desc">
+                Clean and minimal mobile application UI concept.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div id="posters" class="gallery-section">
-    <h2>Poster Designs</h2>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="images/poster1.png" alt="Poster Design 1" />
-        <p>Modern poster design for a product campaign.</p>
-      </div>
+    <!-- Full Image Modal -->
+    <div id="imageModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImg" />
     </div>
-  </div>
 
-  <div id="uiux" class="gallery-section">
-    <h2>UI/UX Designs</h2>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="images/uiux1.png" alt="UI/UX Design 1" />
-        <p>Mobile app UI design concept with clean layout.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <script>
+      // Sidebar Toggle
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        const mainContent = document.getElementById("main-content");
+        if (sidebar.style.width === "250px") {
+          sidebar.style.width = "0";
+          mainContent.style.marginLeft = "0";
+        } else {
+          sidebar.style.width = "250px";
+          mainContent.style.marginLeft = "250px";
+        }
+      }
+
+      // Show Category
+      function showCategory(categoryId) {
+        const categories = document.querySelectorAll(".category");
+        categories.forEach((cat) => cat.classList.remove("active"));
+        document.getElementById(categoryId).classList.add("active");
+        toggleSidebar(); // close sidebar after selection
+      }
+
+      // Image Modal
+      function openModal(imgSrc) {
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImg");
+        modal.style.display = "block";
+        modalImg.src = imgSrc;
+      }
+
+      function closeModal() {
+        document.getElementById("imageModal").style.display = "none";
+      }
+
+      // Default open Logos section and set positions
+      document.addEventListener("DOMContentLoaded", () => {
+        showCategory("logos");
+        const header = document.querySelector("header.graphics");
+        const headerHeight = header.offsetHeight;
+        const sidebar = document.getElementById("sidebar");
+        document.body.style.paddingTop = `${headerHeight}px`;
+        sidebar.style.top = `${headerHeight}px`;
+        sidebar.style.height = `calc(100% - ${headerHeight}px)`;
+      });
+    </script>
+  </body>
+</html>

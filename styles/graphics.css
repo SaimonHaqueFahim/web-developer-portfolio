@@ -1,40 +1,182 @@
-.graphics-categories {
+.section-title{
   text-align: center;
-  margin: 30px 0;
+  margin-top: 20px; /* Add a bit of top margin for spacing in main content */
 }
 
-.graphics-categories button {
-  background: #00ffd5;
-  border: none;
-  padding: 12px 25px;
-  margin: 10px;
-  font-size: 16px;
+/* Header Fixed */
+header.graphics {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 300;
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  padding: 8px 20px; /* Adjusted padding to fit search bar properly */
+  height: 50px; /* Increased height slightly to accommodate search bar */
+}
+
+.hamburger {
+  font-size: 24px;
   cursor: pointer;
-  border-radius: 8px;
+  color: #00ffd5;
+  margin-right: 15px;
+}
+
+.site-logo {
+  height: 130px;
+  width: auto;
+  margin-right: 20px;
+}
+
+.search-container {
+  flex: 1;
+  max-width: 600px;
+  height: 60px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+/* Main Content */
+.main-content {
+  transition: margin-left 0.4s;
+  margin-left: 0;
+  padding: 20px; /* Add some padding for better spacing */
+}
+
+/* Sidebar (like YouTube) */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.4s;
+  padding-top: 20px; /* Add padding to start links a bit down, like YouTube */
+}
+
+.sidebar a {
+  padding: 12px 25px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #ddd;
+  display: block;
   transition: 0.3s;
 }
 
-.graphics-categories button:hover {
-  background: #ff00ff;
-  color: #fff;
+.sidebar a:hover {
+  background: #00ffd5;
+  color: #111;
+  font-weight: bold;
 }
 
+.sidebar .closebtn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Category Sections */
+.category {
+  display: none;
+}
+.category.active {
+  display: block;
+}
+
+/* Modal Image */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 500;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  border-radius: 10px;
+}
+
+/* YouTube-like Card Layout */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
 }
 
-.gallery-item {
-  background: #111;
-  border-radius: 10px;
-  padding: 15px;
-  text-align: center;
-  transition: 0.3s;
+.card {
+  background: #181818;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery-item img {
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 8px 18px rgba(0, 255, 213, 0.3);
+}
+
+.thumbnail {
   width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 12px;
+  text-align: left;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  margin: 0 0 6px;
+}
+
+.card-desc {
+  font-size: 14px;
+  color: #bbb;
+  line-height: 1.4;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: #ff00ff;
+}
+
+/* Center the title-description */
+.title-description {
+  text-align: center;
+  margin: 10px auto;
+  font-size: 14px;
+  max-width: 80%; /* Ensure it stays centered and doesn't stretch too wide */
 }
