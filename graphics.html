@@ -500,6 +500,79 @@
         sidebar.style.top = `${headerHeight}px`;
         sidebar.style.height = `calc(100% - ${headerHeight}px)`;
       });
+
+      // =========================
+      // Search Feature
+      // =========================
+      const searchInput = document.getElementById("searchInput");
+      const suggestionsBox = document.getElementById("suggestions");
+      const cards = document.querySelectorAll(".card");
+      let titles = [];
+
+      // Collect all titles
+      cards.forEach((card) => {
+        const title = card.querySelector(".card-title").textContent.trim();
+        titles.push(title);
+      });
+
+      // Show suggestions while typing
+      searchInput.addEventListener("input", function () {
+        const query = this.value.toLowerCase();
+        suggestionsBox.innerHTML = "";
+
+        if (query) {
+          const matched = titles.filter((t) => t.toLowerCase().includes(query));
+          if (matched.length > 0) {
+            matched.forEach((title) => {
+              const div = document.createElement("div");
+              div.textContent = title;
+              div.addEventListener("click", () => {
+                searchInput.value = title;
+                suggestionsBox.style.display = "none";
+                filterCards(title);
+              });
+              suggestionsBox.appendChild(div);
+            });
+            suggestionsBox.style.display = "block";
+          } else {
+            suggestionsBox.style.display = "none";
+          }
+        } else {
+          suggestionsBox.style.display = "none";
+          showAllCards();
+        }
+      });
+
+      // Search on Enter key
+      searchInput.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          filterCards(this.value.trim());
+          suggestionsBox.style.display = "none";
+        }
+      });
+
+      // Function to filter cards
+      function filterCards(query) {
+        query = query.toLowerCase();
+        cards.forEach((card) => {
+          const title = card
+            .querySelector(".card-title")
+            .textContent.toLowerCase();
+          if (title.includes(query)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }
+
+      // Reset view if search box is cleared
+      function showAllCards() {
+        cards.forEach((card) => {
+          card.style.display = "block";
+        });
+      }
     </script>
   </body>
 </html>

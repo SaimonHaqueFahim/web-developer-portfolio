@@ -44,6 +44,30 @@ header.graphics {
   font-size: 16px;
 }
 
+/* Search Suggestions */
+.suggestions {
+  position: absolute;
+  background: #222;
+  border: 1px solid #333;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 100%;
+  z-index: 1000;
+  display: none;
+}
+
+.suggestions div {
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #ddd;
+}
+
+.suggestions div:hover {
+  background: #00ffd5;
+  color: #111;
+}
+
+
 /* Main Content */
 .main-content {
   transition: margin-left 0.4s;
