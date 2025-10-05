@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Station</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/frontend.css" />
+    <link rel="stylesheet" href="styles/graphics.css" />
+    <link rel="stylesheet" href="styles/blog.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="images/fahim_logo.png" alt="Saimon Haque Logo" class="logo" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Hire Me</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+      <ul>
+        <li>
+          <a href="#" id="about-link">
+            <img src="images/icons/aboutme.png" alt="About Icon" class="icon" />
+            About Me
+          </a>
+        </li>
+        <li>
+          <a href="#" id="contact-link">
+            <img
+              src="images/icons/contact.png"
+              alt="Contact Icon"
+              class="icon"
+            />
+            Contact
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="files/Saimon_Resume.pdf"
+            download="Saimon_Resume.pdf"
+            class="menu-link"
+          >
+            <img
+              src="images/icons/downloadcv.png"
+              alt="Contact Icon"
+              class="icon"
+            />
+            Download CV
+          </a>
+        </li>
+        <li>
+          <a href="#" id="projects-toggle">
+            <img
+              src="images/icons/projects.png"
+              alt="Projects Icon"
+              class="icon"
+            />
+            Projects
+          </a>
+          <ul class="projects-submenu" id="projects-submenu">
+            <li><a href="frontend.html">Frontend</a></li>
+            <li><a href="graphics.html">Graphics</a></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- About Me Modal -->
+    <div id="aboutModal" class="modal">
+      <div class="modal-content neon-glow">
+        <span class="close-btn" id="closeAbout">&times;</span>
+        <div class="about-card">
+          <img
+            src="images/propic.jpg"
+            alt="Saimon Haque Fahim"
+            class="about-pic"
+          />
+          <h2>Saimon Haque Fahim</h2>
+          <p>
+            Computer Science graduate with hands-on experience in Front-End
+            Development and Software Quality Assurance. Skilled in building
+            responsive, user-friendly web applications and ensuring product
+            reliability through thorough testing processes. Experienced in both
+            development and QA roles, giving me a well-rounded understanding of
+            the software lifecycle. Passionate about creating efficient digital
+            solutions, improving user experience.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+      <div class="modal-content neon-glow">
+        <span class="close-btn" id="closeContact">&times;</span>
+        <div class="contact-card">
+          <img
+            src="images/propic.jpg"
+            alt="Saimon Haque Fahim"
+            class="contact-pic"
+          />
+          <h2>Contact Me</h2>
+          <p>
+            Email:
+            <a href="mailto:mshfahim12@gmail.com">mshfahim12@gmail.com</a>
+          </p>
+          <p>Phone: <a href="tel:+8801924075318">+880 1924-075318</a></p>
+          <p>Location: Dhaka, Bangladesh</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank"
+              >LinkedIn</a
+            >
+            <a href="https://github.com/yourgithub" target="_blank">GitHub</a>
+            <a href="https://www.facebook.com/yourfacebook" target="_blank"
+              >Facebook</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <h1>Blog Station</h1>
+      <!-- Post 1: Text Only -->
+      <div class="post-card neon-glow">
+        <div class="post-header">
+          <img
+            src="images/propic.jpg"
+            alt="Saimon Haque Profile"
+            class="profile-pic"
+          />
+          <div>
+            <div class="profile-name">Saimon Haque Fahim</div>
+            <div class="post-date">October 05, 2025</div>
+          </div>
+        </div>
+        <div class="post-content">
+          <h3>The Ultimate AI Tools List</h3>
+          ChatGPT.com → Solves almost everything. <br />
+          DeepSeek: The AI Challenger to ChatGPT <br />
+          Grok: Elon Musk’s Witty AI Chatbot <br />
+          Bolt.new: Build Full-Stack Apps with AI in Your Browser <br />
+          MidJourney.com → AI image generation. <br />
+          Heygen.com → AI avatars. <br />
+          Soundraw.io → AI music generation. <br />
+          Ranked.ai → SEO optimization tool. <br />
+          Submagic.co → Makes video clips. <br />
+          SlidesAI.io → Auto presentations. <br />
+          PicWish.com → Image editing / background removal. <br />
+          Adcreative.ai → AI ad creatives. <br />
+          Canva.com → Design anything. <br />
+          Fastphoto.io → AI headshots. <br />
+          Uizard.io → Sketch → UI mockups. <br />
+          Aiva.ai → AI music composition. <br />
+          AnimaApp.com → Design → Code. <br />
+          Replika.ai → AI companion. <br />
+          notebooklm.google.com → Google’s AI notebook <br />
+          n8n.io → Automation platform. <br />
+          beehiiv.com → Newsletter tool. <br />
+          Remove.bg → Background remover. <br />
+          Perplexity.ai → AI search engine. <br />
+          Beautiful.ai → AI-powered presentations. <br />
+        </div>
+      </div>
+
+      <!-- Post 2: With Image -->
+      <div class="post-card neon-glow">
+        <div class="post-header">
+          <img
+            src="images/propic.jpg"
+            alt="Saimon Haque Profile"
+            class="profile-pic"
+          />
+          <div>
+            <div class="profile-name">Saimon Haque Fahim</div>
+            <div class="post-date">October 02, 2025</div>
+          </div>
+        </div>
+        <div class="post-content">
+          <h3>Basic Keyboard Shortcuts</h3>
+          `Ctrl + C` ➤ Copy <br />
+          `Ctrl + X` ➤ Cut <br />
+          `Ctrl + V` ➤ Paste <br />
+          `Ctrl + Z` ➤ Undo <br />
+          `Ctrl + Y` ➤ Redo <br />
+          `Ctrl + A` ➤ Select All <br />
+          `Alt + Tab` ➤ Switch between open apps <br />
+          `Windows + D` ➤ Show Desktop <br />
+          `Windows + E` ➤ Open File Explorer <br />
+          `Windows + L` ➤ Lock PC <br />
+          `Windows + I` ➤ Open Settings <br />
+          `Windows + S` ➤ Search <br />
+          `Alt + F4` ➤ Close current app <br />
+          `Ctrl + Shift + Esc` ➤ Open Task Manager <br />
+          `Windows + Shift + S` ➤ Screenshot (Snip & Sketch)
+        </div>
+        <img
+          src="images/blog/keyboard.jpg"
+          alt="Team Lunch"
+          class="post-image"
+        />
+      </div>
+
+      <!-- Post 3: Ethics Reflection -->
+      <div class="post-card neon-glow">
+        <div class="post-header">
+          <img
+            src="images/propic.jpg"
+            alt="Saimon Haque Profile"
+            class="profile-pic"
+          />
+          <div>
+            <div class="profile-name">Saimon Haque Fahim</div>
+            <div class="post-date">September 25, 2025</div>
+          </div>
+        </div>
+        <div class="post-content">
+          Ethics matter in tech. Always verify fixes in regression testing to
+          avoid surprises. Learned this at AeroTrip. #SQA #Ethics
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const sidebar = document.getElementById("sidebar");
+      const projectsToggle = document.getElementById("projects-toggle");
+      const projectsSubmenu = document.getElementById("projects-submenu");
+
+      hamburger.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+        hamburger.classList.toggle("active");
+      });
+
+      projectsToggle.addEventListener("click", (e) => {
+        e.preventDefault();
+        projectsSubmenu.classList.toggle("active");
+      });
+
+      // Modal functionality
+      const aboutLink = document.getElementById("about-link");
+      const aboutModal = document.getElementById("aboutModal");
+      const closeAbout = document.getElementById("closeAbout");
+
+      // Open modal when clicking About
+      aboutLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        aboutModal.style.display = "flex";
+      });
+
+      // Close modal when clicking X
+      closeAbout.addEventListener("click", () => {
+        aboutModal.style.display = "none";
+      });
+
+      // Close modal when clicking outside
+      window.addEventListener("click", (e) => {
+        if (e.target === aboutModal) {
+          aboutModal.style.display = "none";
+        }
+      });
+
+      // Contact Modal functionality
+      const contactLink = document.getElementById("contact-link"); // Sidebar Contact link
+      const contactModal = document.getElementById("contactModal");
+      const closeContact = document.getElementById("closeContact");
+
+      // Open modal when clicking Contact
+      contactLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        contactModal.style.display = "flex";
+      });
+
+      // Close modal when clicking X
+      closeContact.addEventListener("click", () => {
+        contactModal.style.display = "none";
+      });
+
+      // Close modal when clicking outside
+      window.addEventListener("click", (e) => {
+        if (e.target === contactModal) {
+          contactModal.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
